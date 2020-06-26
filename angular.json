@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LaurelNG"
+    }
+  },
+  "defaultProject": "LaurelNG",
+  "cli": {
+    "analytics": "fa67b36b-6731-4baa-b8d9-d2a9a09a3986"
+  }
 }

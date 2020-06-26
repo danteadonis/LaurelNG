@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@-webkit-keyframes spinner{
+  0% {-webkit-transform: rotate(360deg);}
+}
+@keyframes spinner{
+  0% {transform: rotate(360deg);}
+}
+
+#loader{
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  border: 10px solid #ccc;
+  border-top: 10px solid #2222ff;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spinner 2s 0.3s infinite linear;
+  animation: spinner 2s 0.3s infinite linear;
+}
