@@ -2,32 +2,6 @@ $bgBlack: #1c1c1c;
 $lightText: #828282;
 $lightTextHov: #f1f1f1;
 
-// Tablet screen downwards
-@media screen and(max-width:768px){
-  nav{
-    width: 100%;
-    
-    #navbar{
-      display: none;
-    }
-  }
-}
-
-// Desktop screen upwards
-@media screen and(min-width:768px){
-  nav{
-    #ellipsis{
-      display: none;
-    }
-
-    #navbar{
-      display: flex;
-      float: right;
-      margin-left: auto;
-    }
-  }
-}
-
 nav{
   box-shadow: 0 5px 5px rgba(10,10,10,0.5);
 
@@ -104,4 +78,3 @@ nav{
   height: 400px;
   background-color: $lightText;
 }
-

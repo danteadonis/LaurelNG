@@ -1,3 +1,66 @@
+// General Styling
+// Mobile screens
+@media screen and(max-width:768px){
+  nav{
+    width: 100%;
+    
+    #navbar{
+      display: none;
+    }
+  }
+
+  #introText{
+    height: 190px;
+    padding: 10px 5px;
+    font-size: 17px;
+  }
+
+  #indexSlider{
+    font-family: "Coming Soon", Arial, sans-serif;
+  }
+}
+
+// Tablet screens
+@media (min-width:768px) and (max-width:1024px){
+  #indexSlider{
+    .img-fluid{
+      height: 590px;
+    }
+  }
+}
+
+// PC screens
+@media screen and(min-width:768px){
+  nav{
+    #ellipsis{
+      display: none;
+    }
+
+    #navbar{
+      display: flex;
+      float: right;
+      margin-left: auto;
+    }
+  }
+
+  #introText{
+    height: 570px;
+    padding: 30px;
+    font: {
+      family: 'Mali', 'Lucida Grande', Arial, sans-serif;
+      weight: lighter;
+      size: xx-large;
+    }
+  }
+
+  #indexSlider{
+    font-family: "Coming Soon", Arial, sans-serif;
+    .carousel-inner{
+      height: 570px;
+    }
+  }
+}
+
 @-webkit-keyframes spinner{
   0% {-webkit-transform: rotate(360deg);}
 }
