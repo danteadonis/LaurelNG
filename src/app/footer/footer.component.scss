@@ -1,0 +1,63 @@
+$normal: #a9a9a9;
+$hover: #e9e9e9;
+$twitter: #00acee;
+$mail: #d44638;
+
+@keyframes iconSpin{
+  0% {transform: rotate(360deg);}
+  100% {width: 38px; height: 38px; padding-top: 2px;}
+}
+
+ul{
+  li{
+    width: 32px;
+    height: 32px;
+    background-color: #1c1c1c;
+    list-style-type: none;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 10px;
+    padding-top: 2px;
+    border-radius: 50%;
+
+    a{
+      color: $normal;
+      display: inline-block;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+  li:hover {
+    .fab, .far{
+      font-size: 30px;
+      padding-top: -1px;
+      justify-content: center;
+      line-height: 100%;
+    }
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-name: iconSpin;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    a{
+      color: $hover;
+    }
+  }
+
+  #instagram:hover{
+    background: radial-gradient(circle, #c13584, #833ab4, #fd1d1d);
+  }
+  #twitter:hover{
+    background-color: $twitter;
+  }
+  #mail:hover{
+    background-color: $mail;
+  }
+  #whatsapp:hover{
+    background: radial-gradient(circle, #075e54, #25d366, $normal);
+  }
+}
+
