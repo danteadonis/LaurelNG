@@ -45,6 +45,8 @@ import {
 })
 
 export class NavbarComponent implements OnInit {
+  
+  brandName: string= 'LaurelNg';
 
   shouldToggle: boolean = false;
 
