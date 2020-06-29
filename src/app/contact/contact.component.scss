@@ -1,0 +1,38 @@
+
+.neumorph{
+  box-shadow: 1px 8px 4px rgba(15,15,15,.7) inset,
+  -1px -7px 6px rgba(15,15,15,.7) inset;
+}
+
+#contact{
+  margin-top: 38px;
+  font: {
+    family: 'Mali', 'Lucida Grande', Arial, sans-serif;
+    weight: lighter;
+  }
+
+  #submitBtn{
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    box-shadow: 5px 5px 4px rgba(15,15,15,.5),
+    -2.5px -2.5px 6.5px rgba(150,150,150,.6);
+    background: linear-gradient(-45deg, #303836, #363c42);
+  }
+  #submitBtn:hover{
+    color: #c8c9ca;
+    box-shadow: 2px 4px 2px rgba(15,15,15,.5) inset,
+    -1.5px -3.5px 3px rgba(150,150,150,.6) inset;
+    background: linear-gradient(45deg, #303836, #484e54);
+  }
+
+  #thanks{
+    border-radius: 10px;
+    box-shadow: 4px 6px 4px rgba(15,15,15,.65);
+    span{
+      cursor: pointer;
+    }
+  }
+}

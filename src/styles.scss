@@ -22,6 +22,10 @@
   .footer{
     padding-left: -10px;
   }
+
+  #about{
+    margin-top: 10px;
+  }
 }
 
 // Tablet screens
@@ -63,6 +67,11 @@
       height: 570px;
     }
   }
+}
+
+//  END OF MEDIA QUERIES
+body{
+  background-color: #dedede;
 }
 
 @-webkit-keyframes spinner{

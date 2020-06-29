@@ -20,6 +20,8 @@ ul{
     margin: 0 10px;
     padding-top: 2px;
     border-radius: 50%;
+    box-shadow: 4px 4px 6px rgba(15,15,15,.7),
+    -2px -2px 5px rgba(15,15,15,.7);
 
     a{
       color: $normal;
@@ -28,22 +30,23 @@ ul{
     a:hover{
       text-decoration: none;
     }
-  }
-  li:hover {
-    .fab, .far{
-      font-size: 30px;
-      padding-top: -1px;
-      justify-content: center;
-      line-height: 100%;
-    }
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation-name: iconSpin;
-    animation-duration: .7s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    
+    .socIcons:hover {
+      .fab, .far{
+        font-size: 20px;
+        padding-top: -1px;
+        justify-content: center;
+        line-height: 100%;
+      }
+      // animation: name duration timing-function delay iteration-count direction fill-mode;
+      animation-name: iconSpin;
+      animation-duration: .7s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
 
-    a{
-      color: $hover;
+      a{
+        color: $hover;
+      }
     }
   }
 

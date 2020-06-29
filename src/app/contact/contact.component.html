@@ -1,0 +1,30 @@
+<div id="contact" class="container">
+  <div class="card card-block bg-dark p-4 text-white neumorph">
+    <h3>Contact Us</h3>
+    <p class="lead text-muted">Got any comments, observations, or complaints? Send us a short message.</p>
+    <form action="#" name="contactForm" method="POST">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon text-white"><i class="far fa-user"></i></span>
+          <input type="text" name="name" [(ngModel)]="personName" class="form-control bg-dark ml-2 text-white" placeholder="your name..." required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon text-white"><i class="far fa-envelope"></i></span>
+          <input type="email" name="email" [(ngModel)]="personEmail" class="form-control bg-dark ml-2 text-white" placeholder="your email...">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon text-white"><i class="fas fa-pencil-alt"></i></span>
+          <textarea name="message" cols="15" rows="7" [(ngModel)]="personMessage" class="form-control bg-dark ml-2 text-white" placeholder="your message..." required></textarea>
+        </div>
+      </div>
+      <div class="text-center">
+        <input type="submit" name="submit" value="Send" onsubmit="" id="submitBtn">
+      </div>
+    </form>
+  </div>
+  <div id="thanks" class="card-header h5 text-center text-white bg-dark my-4">Thanks for the feedback!<span (click)= "closeThanks()" class="float-right ml-auto">&times;</span></div>
+</div>
