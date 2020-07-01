@@ -11,6 +11,30 @@
     weight: lighter;
   }
 
+  .lead{
+    color: #c8c9ca;
+    .info{
+      font-size: smaller;
+    }
+  }
+
+  .form-group{
+    i{
+      margin-top: 12px;
+    }
+    .input-group{
+      margin-bottom: 7px;
+    }
+    textarea{
+      background-color: #343a40;
+      margin-bottom: 12px;
+    }
+    textarea:focus, textarea:valid{
+      background-color: #e8e9fa;
+      color: #343a40;
+    }
+  }
+
   #submitBtn{
     background-color: #343a40;
     color: #f8f9fa;
@@ -30,6 +54,8 @@
 
   #thanks{
     border-radius: 10px;
+    font-size: small;
+    font-weight: bolder;
     box-shadow: 4px 6px 4px rgba(15,15,15,.65);
     span{
       cursor: pointer;

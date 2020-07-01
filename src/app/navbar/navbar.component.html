@@ -26,17 +26,17 @@
 <div id="sideNav" [@sideNavTrigger]= "shouldToggle? 'shown' : 'hidden'">
   <div (click)="toggler()" id="closeNav"><i class="fas fa-times">&times;</i></div>
   <div class="container text-center" style="border-bottom: 0px;">
-    <a routerLink="" class="nav-link">Home</a>
+    <a routerLink="" (click)="toggler()" class="nav-link">Home</a>
     <a href="" class="nav-item">
       <div class="dropdown">
         <div class="dropdown-toggle nav-link" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</div>
         <div class="dropdown-menu" aria-labelledby="navDropdown">
-          <a href="" class="dropdown-item">Male</a>
-          <a href="" class="dropdown-item">Female</a>
+          <a href="" (click)="toggler()" class="dropdown-item">Male</a>
+          <a href="" (click)="toggler()" class="dropdown-item">Female</a>
         </div>
       </div>
     </a>
-    <a routerLink="about" class="nav-link">About Us</a>
-    <a routerLink="contact" class="nav-link">Contact Us</a>
+    <a routerLink="about" (click)="toggler()" class="nav-link">About Us</a>
+    <a routerLink="contact" (click)="toggler()" class="nav-link">Contact Us</a>
   </div>
 </div>
