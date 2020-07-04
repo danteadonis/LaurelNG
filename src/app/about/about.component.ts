@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  brandName: string= `LaurelNg`;
+  brandName: string= `Laurel`;
   ownerName: string= `Lawrence Adeyeye`;
-  aboutText: string= `${this.brandName} is a clothing brand designed and managed 
-    by ${this.ownerName}. It started as a small-time shirt sale on school 
-    campus and is gradually becoming a big enterprise. The brand's main goal is 
-    connecting with people, and this can be seen in most of the merchandise 
-    as a lot of the designs are relatable. The brand also specializes in 
-    casual wears, random prints, and plain t-shirts.`;
+  studies: string= `Computer Science`;
+  likes: string= `likesss`;
+  hobbies: string= `1,2,3.`;
+  profileImg: string = './assets/images/DSC_0057-Edit.jpg';
 
   constructor() { }
 

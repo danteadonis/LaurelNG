@@ -2,7 +2,7 @@
   <div class="card card-block bg-dark p-4 text-white neumorph">
     <h3>Contact Us</h3>
     <p class="lead">Got any comments, observations, or complaints? Send us a short message.<br><span class="info text-muted">(your email is recommended but not compulsory)</span></p>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-group" action="#" name="contactForm" method="POST">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-group" action="contact-submit.php" name="contactForm" method="POST">
       <div>
         <div class="input-group">
           <span class="input-group-addon text-white"><i class="far fa-user"></i></span>
@@ -23,4 +23,8 @@
     </form>
   </div>
   <div id="thanks" class="alert bg-dark text-white text-center my-4">Thanks for the feedback!<span (click)="closeThanks()" class="close text-white">&times;</span></div>
+  <div>
+    Hi <?php echo htmlspecialchars($_POST['contactForm']); ?>
+  </div>
 </div>
+

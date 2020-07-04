@@ -1,0 +1,85 @@
+
+$bgColor: #555;
+$bgColorHov: #4e4e4e;
+$color: #fefefe;
+$colorHov: #cecece;
+
+.container{
+  font-family: 'Mali', 'Lucida Grande', Arial, sans-serif;
+
+  .card{
+    button{
+      background-color: $bgColor;
+      color: $color;
+      box-shadow: 2px 3px 2px rgba(15,15,15,.8);
+      border: none;
+      border-radius: 5px;
+      width: 100px;
+      height: 30px;
+    }
+    button:hover, button:focus{
+      background-color: $bgColorHov;
+      color: $colorHov;
+      box-shadow: 2px 3px 2px rgba(15,15,15,.8) inset,
+      -2px -2px 2px rgba(200,200,200,.8) inset;
+    }
+  }
+  
+  .modal-content{
+    box-shadow: 5px 8px 7px rgba(15,15,15,.8);
+    .modalBtns{
+      width: 90px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    input[type="submit"]{
+      background-color: #28a745;
+      color: $color;
+      box-shadow: 5px 5px 4px rgba(15,15,15,.8),
+      -1px -1px 6.5px rgba(200,200,200,.8);
+    }
+    input[type="submit"]:hover{
+      color: $colorHov;
+      box-shadow: 2px 4px 2px rgba(15,15,15,.8) inset,
+      -1.5px -3.5px 3px rgba(200,200,200,.8) inset;
+    }
+
+    .modal-footer{
+      button{
+        background-color: #dc3545;
+        color: $color;
+        box-shadow: 5px 5px 4px rgba(15,15,15,.8),
+        -1px -1px 6.5px rgba(200,200,200,.8);
+      }
+      button:hover{
+      color: $colorHov;
+      box-shadow: 2px 4px 2px rgba(15,15,15,.8) inset,
+      -1.5px -3.5px 3px rgba(200,200,200,.8) inset;
+      }
+    }
+  }
+
+  #backUp{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #efefef;
+    box-shadow: 2px 2px 7px #555;
+    cursor: pointer;
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    i{
+      text-align: center;
+      position: relative;
+      top: 15%;
+      left: 35%;
+    }
+  }
+  #backUp:hover, #backUp:focus{
+    opacity: .4;
+  }
+}
+

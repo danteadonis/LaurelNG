@@ -1,4 +1,6 @@
-// General Styling
+
+// Media Queries
+
 // Mobile screens
 @media screen and(max-width:768px){
   nav{
@@ -25,6 +27,12 @@
 
   #about{
     margin-top: 10px;
+  }
+
+  #profile{
+    .card{
+      width: 100%;
+    }
   }
 }
 
@@ -70,8 +78,15 @@
 }
 
 //  END OF MEDIA QUERIES
-body{
-  background-color: #dedede;
+
+// GENERAL STYLING
+
+html{
+  scroll-behavior: smooth;
+
+  body{
+    background-color: #dedede;
+  }
 }
 
 @-webkit-keyframes spinner{

@@ -1,5 +1,10 @@
 
 p{
+  span[data-toggle="modal"]{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
   font: {
     family: 'Coming Soon', Arial, sans-serif;
     size: 36px;
@@ -7,4 +12,25 @@ p{
   }
   text-align: center;
   margin-top: 50px;
+}
+
+#profile{
+  width: 400px;
+  height: 470px;
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  box-shadow: 6px 8px 7px rgba(15,15,15,.7);
+  span[data-toggle="modal"]{
+    cursor: pointer;
+  }
+}
+
+#profileModal{
+  .modal-footer{
+    ul{
+      list-style-type: none;
+      margin-left: -25px;
+    }
+  }
 }

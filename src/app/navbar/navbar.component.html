@@ -1,4 +1,4 @@
-<div id="top" class="text-center text-light">#BlackLivesMatter #StaySafe<i (click)="closeTop()" class="fas fa-times float-right ml-auto pt-1"></i></div>
+<div id="top" class="text-center text-light">#StaySafe #BlackLivesMatter<i (click)="closeTop()" class="fas fa-times float-right ml-auto pt-1"></i></div>
 <nav class="sticky-top bg-dark">
   <div class="container">
     <a routerLink="" class="navbar-brand">
@@ -12,31 +12,31 @@
         <div class="dropdown">
           <div class="dropdown-toggle nav-link" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</div>
           <div class="dropdown-menu" aria-labelledby="navDropdown">
-            <a href="" class="dropdown-item">Male</a>
-            <a href="" class="dropdown-item">Female</a>
+            <a routerLink="shop-male" routerLinkActive="active" class="dropdown-item">Male</a>
+            <a routerLink= "shop-female" routerLinkActive="active" class="dropdown-item">Female</a>
           </div>
         </div>
       </a>
-      <a routerLink="about" class="nav-link">About Us</a>
-      <a routerLink="contact" class="nav-link">Contact Us</a>
+      <a routerLink="about" routerLinkActive="active" class="nav-link">About Us</a>
+      <a routerLink="contact" routerLinkActive="active" class="nav-link">Contact Us</a>
     </div>
   </div>
 </nav>
 
 <div id="sideNav" [@sideNavTrigger]= "shouldToggle? 'shown' : 'hidden'">
   <div (click)="toggler()" id="closeNav"><i class="fas fa-times">&times;</i></div>
-  <div class="container text-center" style="border-bottom: 0px;">
+  <div class="container nav-tabs text-center" style="border-bottom: 0px;">
     <a routerLink="" (click)="toggler()" class="nav-link">Home</a>
     <a href="" class="nav-item">
       <div class="dropdown">
         <div class="dropdown-toggle nav-link" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</div>
         <div class="dropdown-menu" aria-labelledby="navDropdown">
-          <a href="" (click)="toggler()" class="dropdown-item">Male</a>
-          <a href="" (click)="toggler()" class="dropdown-item">Female</a>
+          <a routerLink="shop-male" routerLinkActive="active" (click)="toggler()" class="dropdown-item">Male</a>
+          <a routerLink="shop-female" (click)="toggler()" routerLinkActive="active" class="dropdown-item">Female</a>
         </div>
       </div>
     </a>
-    <a routerLink="about" (click)="toggler()" class="nav-link">About Us</a>
-    <a routerLink="contact" (click)="toggler()" class="nav-link">Contact Us</a>
+    <a routerLink="about" routerLinkActive="active" (click)="toggler()" class="nav-link">About Us</a>
+    <a routerLink="contact" routerLinkActive="active" (click)="toggler()" class="nav-link">Contact Us</a>
   </div>
 </div>

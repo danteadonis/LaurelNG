@@ -28,7 +28,7 @@ import {
           style({transform: 'translateX(100%)'}),
           style({transform: 'translateX(-75px)'}),
           style({transform: 'translateX(15px)'}),
-          style({transform: 'translateX(0)'})
+          style({transform: 'translateX(0)', display: 'block'})
         ]))
       ]),
 

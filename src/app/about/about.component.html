@@ -1,1 +1,33 @@
-<p id="about" class="container h1">{{ aboutText }}</p>
+
+<p id="about" class="container h1">{{ brandName }}&trade; is a clothing brand designed and managed 
+  by <span data-toggle="modal" data-target="#profileModal" style="font-family: Arial, Helvetica, sans-serif;">{{ ownerName }}</span>. 
+  It started as a small-time shirt sale on school campus and is gradually becoming a big enterprise. 
+  The brand's main goal is connecting people and telling stories through fashion, this 
+  can be seen in most of the merchandise as a lot of the designs are relatable. The 
+  brand also specializes in casual wears, random prints, and plain t-shirts.
+</p>
+
+  <!-- Profile Modal -->
+<div id="profileModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="far fa-user"></i> {{ ownerName }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="profileImg" alt="Lawrence Adeyeye" class="img-fluid">
+      </div>
+      <div class="modal-footer d-block px-0">
+        <ul>
+          <li><b>Studies: </b> {{ studies }}</li>
+          <li><b>Likes: </b> {{ likes }}</li>
+          <li><b>Hobbies: </b> {{ hobbies }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
