@@ -9,9 +9,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   contactForm=new FormGroup({
-    personName: new FormControl('', Validators.required),
-    personEmail: new FormControl(''),
-    personMessage: new FormControl('', Validators.required)
+    name: new FormControl('', Validators.required),
+    email: new FormControl(''),
+    message: new FormControl('', Validators.required)
   })
 
   constructor() { }
@@ -30,9 +30,9 @@ export class ContactComponent implements OnInit {
     console.warn(this.contactForm.value);
     document.getElementById("thanks").style.display= 'block';
     this.contactForm.patchValue({
-      personName: '',
-      personEmail: '',
-      personMessage: ''
+      name: '',
+      email: '',
+      message: ''
     })
   }
 

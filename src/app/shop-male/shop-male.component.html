@@ -2,7 +2,7 @@
   <h4 id="top" class="mt-3">{{ pageTitle }}</h4>
   <div class="card py-1 text-light text-center bg-danger">
     <i class="fas fa-info-circle"></i>
-    Due to the global situation deliveries may take up to 10 days.
+    Due to the global situation, deliveries may take up to 10 days.
   </div>
   <div class="row">
     <div *ngFor="let product of products" class="col-md-6">
@@ -33,20 +33,21 @@
             <div class="modal-body">
               <div>
                 <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" name="orderForm" action="order-submit.php" method="POST" id="orderForm" class="form-group">
+
                   <!-- Disabled fields -->
                   <div class="row">
                     <div class="col-sm-12 mb-2">
                       <label for="productName" class="col-sm-6 control-label">Product Name</label>
                       <div class="col-sm-12">
-                        <input formControlName="prodName" name="prodName" type="text" value="some value" class="form-control">
+                        <input formControlName="productName" name="productName" type="text" class="form-control">
                       </div>
                     </div>
-                    <div class="col-sm-12 mb-2">
+                    <!-- <div class="col-sm-12 mb-2">
                       <label for="productPrice" class="col-sm-6 control-label">Price</label>
                       <div class="col-sm-12">
-                        <input formControlName="prodPrice" name="prodPrice" type="number" class="form-control">
+                        <input name="productPrice" type="number" [value]="product.price" class="form-control" disabled>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
     
                   <!-- Interactable fields -->
@@ -59,15 +60,26 @@
                       </div>
                     </div>
                     <div class="col-sm-12 mb-2">
+                      <label for="shirtSize" class="col-sm-6 control-label">Shirt Size</label>
+                      <div class="col-sm-12">
+                        <select formControlName="shirtSize" name="shirtSize" class="form-control">
+                          <option value="small" class="form-control">Small (S)</option>
+                          <option value="large" class="form-control">Large (L)</option>
+                          <option value="XL" class="form-control">Extra Large (XL)</option>
+                          <option value="XXL" class="form-control">Extra Large+ (XXL)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 mb-2">
                       <label for="buyerAddress" class="col-sm-6 control-label">Your Address</label>
                       <div class="col-sm-12">
-                        <input formControlName="buyerAddr" name="buyerAddr" type="text" class="form-control" placeholder="your address..." required>
+                        <input formControlName="buyerAddress" name="buyerAddress" type="text" class="form-control" placeholder="your address..." required>
                       </div>
                     </div>
                     <div class="col-sm-12 mb-2">
                       <label for="nearestBustop" class="col-sm-6 control-label">Your Location</label>
                       <div class="col-sm-12">
-                        <input formControlName="nearestBustop" name="nearestBustop" type="text" class="form-control" placeholder="nearest bustop / landmark" required>
+                        <input formControlName="nearestBustop" name="nearestBustop" type="text" class="form-control" placeholder="nearest landmark/bustop" required>
                       </div>
                     </div>
                   </div>
@@ -86,7 +98,7 @@
                     <div *ngIf="notifyPhone" class="col-sm-12 mb-2">
                       <label for="buyerPhoneNumber" class="col-sm-6 control-label">Your Phone Number</label>
                       <div class="col-sm-12">
-                        <input formControlName="buyerPhone" name="buyerPhone" type="tel" class="form-control" placeholder="your phone number...">
+                        <input formControlName="buyerPhone" name="" type="tel" class="form-control" placeholder="your phone number...">
                       </div>
                     </div>
                     <div *ngIf="!notifyPhone" class="col-sm-12 mb-2">
@@ -100,7 +112,7 @@
                     <h6 class="text-muted">PLEASE FILL ALL FIELDS WITH THE APPROPRIATE INFO.</h6>
                   </div>
                   <div *ngIf="orderForm.valid" class="row mt-2 ml-1">
-                    <input type="submit" name="Order" value="Order" class="modalBtns" data-toggle="modal" data-dismiss="modal" data-target="#thanksModal">
+                    <input type="submit" value="Order" class="modalBtns" data-toggle="modal" data-target="#thanksModal">
                   </div>
                 </form>
               </div>
@@ -117,7 +129,7 @@
       <!-- Thanks modal -->
       <div id="thanksModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content bg-dark text-white">
+          <div class="modal-content bg-success text-white">
             <div class="modal-header" style="border-bottom: 0px;">
               <h6 id="thanksModal" class="modal-title">Your order has been sent, thanks for shopping with us!</h6>
               <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">

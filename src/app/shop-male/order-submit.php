@@ -2,10 +2,10 @@
 <?php 
 
   if(!empty($_POST["Order"])){
-    $prodName= $_POST["prodName"];
-    $prodPrice= $_POST["prodPrice"];
+    $prodName= $_POST["productName"];
     $qtty= $_POST["quantity"];
-    $buyerAddr= $_POST["buyerAddr"];
+    $shirtSize= $_POST["shirtSize"];
+    $buyerAddr= $_POST["buyerAddress"];
     $nearestBustop= $_POST["nearestBustop"];
     $buyerPhone= $_POST["buyerPhone"];
     $buyerEmail= $_POST["buyerEmail"];

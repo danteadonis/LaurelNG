@@ -10,12 +10,6 @@ export class ShopMaleComponent implements OnInit {
   
   pageTitle: string= 'Products';
   backUpBtn: any;
-  
-  selectedProdName: string;
-  selectedProdPrice: number;
-  selectedQtty: number;
-  selectedAddr: string;
-  selectedBustop: string;
 
   notifyPhone: boolean;
 
@@ -59,11 +53,12 @@ export class ShopMaleComponent implements OnInit {
   ]
 
   orderForm= new FormGroup({
-    prodName: new FormControl({value: 'late night', disabled: true}),
-    prodPrice: new FormControl({value: this.selectedProdPrice, disabled: true}),
-    quantity: new FormControl({value: this.selectedQtty}, Validators.required),
-    buyerAddr: new FormControl({value: this.selectedAddr}, Validators.required),
-    nearestBustop: new FormControl({value: this.selectedBustop}, Validators.required),
+    productName: new FormControl('', Validators.required),
+    //prodPrice: new FormControl({value: this.selectedProdPrice, disabled: true}),
+    quantity: new FormControl('', Validators.required),
+    shirtSize: new FormControl(),
+    buyerAddress: new FormControl('', Validators.required),
+    nearestBustop: new FormControl('', Validators.required),
     /*radioPhone: new FormControl(),
     radioEmail: new FormControl(),*/
     buyerPhone: new FormControl(),
@@ -74,12 +69,13 @@ export class ShopMaleComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.backUpBtn=document.getElementById('backUp');
-    window.onscroll = function(){
-      if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500){
-        this.backUpBtn.style.display= 'block';
+    this.backUpBtn=document.getElementById('backUp').style.display='none';
+
+    window.onscroll= function(){
+      if(document.body.scrollTop >= 500 || document.documentElement.scrollTop >= 500){
+        document.getElementById('backUp').style.display='block';
       }else{
-        this.backUpBtn.style.display= 'none';
+        document.getElementById('backUp').style.display='none';
       }
     }
 
@@ -93,8 +89,15 @@ export class ShopMaleComponent implements OnInit {
   }
   
   onSubmit(): void{
-    console.warn(this.orderForm.value);
-    console.log('submitted');
+    console.log(this.orderForm.value);
+    this.orderForm.patchValue({
+      productName: '',
+      quantity: '',
+      buyerAddress: '',
+      nearestBustop: '',
+      buyerPhone: '',
+      buyerEmail: ''
+    })
   }
 
   backToTop(): void{

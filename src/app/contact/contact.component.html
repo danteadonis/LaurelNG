@@ -6,15 +6,15 @@
       <div>
         <div class="input-group">
           <span class="input-group-addon text-white"><i class="far fa-user"></i></span>
-          <input formControlName="personName" type="text" name="name" class="form-control bg-dark ml-2 text-white" placeholder="your name..." required>
+          <input formControlName="name" type="text" name="name" class="form-control bg-dark ml-2 text-white" placeholder="your name..." required>
         </div>
         <div class="input-group">
           <span class="input-group-addon text-white"><i class="far fa-envelope"></i></span>
-          <input formControlName="personEmail" type="email" name="email" class="form-control bg-dark ml-2 text-white" placeholder="your email...">
+          <input formControlName="email" type="email" name="email" class="form-control bg-dark ml-2 text-white" placeholder="your email...">
         </div>
         <div class="input-group">
           <span class="input-group-addon text-white"><i class="fas fa-pencil-alt"></i></span>
-          <textarea formControlName="personMessage" name="message" cols="15" rows="7" class="form-control ml-2" placeholder="your message..." required></textarea>
+          <textarea formControlName="message" name="message" cols="15" rows="7" class="form-control ml-2" placeholder="your message..." required></textarea>
         </div>
       </div>
       <div class="text-center">
@@ -24,7 +24,7 @@
   </div>
   <div id="thanks" class="alert bg-dark text-white text-center my-4">Thanks for the feedback!<span (click)="closeThanks()" class="close text-white">&times;</span></div>
   <div>
-    Hi <?php echo htmlspecialchars($_POST['contactForm']); ?>
+    <!-- Hi <?php echo htmlspecialchars($_POST['contactForm']); ?> -->
   </div>
 </div>
 

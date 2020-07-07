@@ -10,9 +10,9 @@ export class AboutComponent implements OnInit {
   brandName: string= `Laurel`;
   ownerName: string= `Lawrence Adeyeye`;
   studies: string= `Computer Science`;
-  likes: string= `likesss`;
-  hobbies: string= `1,2,3.`;
-  profileImg: string = './assets/images/DSC_0057-Edit.jpg';
+  likes: string= `Fashion, Music, Social events.`;
+  hobbies: string= `Reading, Writing (Blogging), Creating Art.`;
+  profileImg: string = './assets/images/IMG-20200706-WA0020.jpg';
 
   constructor() { }
 

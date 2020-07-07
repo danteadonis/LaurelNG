@@ -5,7 +5,7 @@
       <img id="navLogo" class="img-fluid" src="assets/images/Laurel_crown_rounded.png" alt="laurel logo">
       <span id="brandFont">{{ brandName }}</span>
     </a>
-    <div (click)="toggler()" id="ellipsis" class="float-right mr-2 mt-3"><i class="fas fa-ellipsis-v">&reg;</i></div>
+    <div (click)="toggler()" id="ellipsis" class="float-right mr-2 mt-3"><i class="fas fa-ellipsis-v"></i></div>
     <div id="navbar" class= "nav-tabs">
       <a routerLink="" class="nav-link">Home</a>
       <a href="" class="nav-item">
@@ -24,7 +24,7 @@
 </nav>
 
 <div id="sideNav" [@sideNavTrigger]= "shouldToggle? 'shown' : 'hidden'">
-  <div (click)="toggler()" id="closeNav"><i class="fas fa-times">&times;</i></div>
+  <div (click)="toggler()" id="closeNav"><i class="fas fa-times"></i></div>
   <div class="container nav-tabs text-center" style="border-bottom: 0px;">
     <a routerLink="" (click)="toggler()" class="nav-link">Home</a>
     <a href="" class="nav-item">
